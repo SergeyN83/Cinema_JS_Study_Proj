@@ -6,6 +6,9 @@ const renderCard = data => {
     listCard.textContent = '';
 
     const cards = data.map((item) => {
+        if (item.vote_average === 1) {
+            item.vote_average = '-';
+        }
 
         const card = document.createElement('li');
         card.className = 'other-films__item';
