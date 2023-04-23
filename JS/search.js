@@ -29,6 +29,8 @@ const search = () => {
             .catch(err => {
                 title.textContent = err;
             });
+
+            searchForm.reset();
     });
 };
 

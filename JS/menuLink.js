@@ -17,8 +17,8 @@ const menuLink = () => {
                 title.textContent = target.textContent;
                 //Тренды
                 if (target.classList.contains('get-nav__link_triends')) {
-                    getTrends()
-                        .then(data => renderCard(data.results));
+                    getTrends('all')
+                        .then(data => renderCard(data.results, 'all'));
                 }
                 //Популярные фильмы
                 if (target.classList.contains('get-nav__link_popular-movies')) {
